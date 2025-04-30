@@ -1,4 +1,3 @@
-
 // alert("Website is in development and some information are incorrect and to be check");
 
 const lines = [
@@ -49,6 +48,15 @@ document.addEventListener("DOMContentLoaded", function () {
     menuToggle.addEventListener("click", function () {
         nav.classList.toggle("nav-active");
     });
+
+    // Dismiss update banner
+    const updateBanner = document.getElementById('update-banner');
+    const closeBannerBtn = document.getElementById('close-update-banner');
+    if (updateBanner && closeBannerBtn) {
+        closeBannerBtn.addEventListener('click', function () {
+            updateBanner.style.display = 'none';
+        });
+    }
 });
 
 
